@@ -11,3 +11,40 @@
   --weight-medium: 400;
   --weight-heavy: 600;
 }
+
+body {
+  min-height: 100vh;
+  font-size: 18px;
+  font-weight: var(--weight-light);
+
+  background-color: var(--neutral-darkest-blue);
+  color: var(--primary-soft-blue);
+  font-family: "Outfit", sans-serif;
+
+  display: grid;
+  place-items: center;
+}
+
+.crypto-card {
+  background-color: var(--neutral-blue);
+
+  margin: 1.5rem;
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+
+.card__content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.content__crypto-image {
+  border-radius: 0.5rem;
+}
+
+.content__header {
+  color: white;
+  font-weight: var(--weight-heavy);
+  font-size: 1.5rem;
+}
