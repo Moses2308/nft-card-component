@@ -48,3 +48,26 @@ body {
   font-weight: var(--weight-heavy);
   font-size: 1.5rem;
 }
+
+.content__values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.values__crypto {
+  color: var(--primary-cyan);
+  font-weight: var(--weight-medium);
+}
+.values__crypto::before {
+  content: url(images/icon-ethereum.svg);
+  margin-right: 0.5rem;
+  position: relative;
+  top: 0.25rem;
+}
+
+.values__time::before {
+  content: url(images/icon-clock.svg);
+  margin-right: 0.5rem;
+  position: relative;
+  top: 0.1rem;
+}
