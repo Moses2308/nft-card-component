@@ -10,6 +10,8 @@
   --weight-light: 300;
   --weight-medium: 400;
   --weight-heavy: 600;
+
+  --neutral-deep-blue: hsl(214, 56%, 10%);
 }
 
 body {
@@ -30,8 +32,10 @@ body {
 
   margin: 1.5rem;
   padding: 1.4rem;
-
+  max-width: 331px;
   border-radius: 1rem;
+
+  box-shadow: 0px 20px 0px 10px var(--neutral-deep-blue);
 }
 
 .card__content {
@@ -42,6 +46,33 @@ body {
 .content__crypto-image {
   border-radius: 0.5rem;
 }
+.image-overlay {
+  position: relative;
+}
+.overlay__square {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 0.5rem;
+
+  position: absolute;
+  top: 0;
+
+  opacity: 0;
+}
+.overlay__square::before {
+  content: url(images/icon-view.svg);
+  position: absolute;
+  top: 42%;
+  left: 42%;
+}
+
+.overlay__square:hover {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .profile__picture {
   border: 1px solid white;
   border-radius: 50%;
@@ -84,7 +115,13 @@ body {
 }
 .content__profile {
   display: flex;
+  font-size: 1rem;
 }
 .profile__username {
   color: var(--neutral-white);
+}
+.profile__username:hover,
+.content__header:hover {
+  color: var(--primary-cyan);
+  cursor: pointer;
 }
