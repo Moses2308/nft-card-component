@@ -40,7 +40,7 @@ body {
 
 .card__content {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .content__crypto-image {
